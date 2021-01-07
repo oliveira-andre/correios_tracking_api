@@ -8,8 +8,9 @@ configure :development do
     encoding: 'utf8',
     database: 'correios_tracking_api_development',
     pool: 5,
-    username: 'postgres',
-    host: 'postgres'
+    username: ENV['pg_user'],
+    password: ENV['pg_pass'],
+    host: ENV['pg_host']
   }
 end
 
@@ -19,8 +20,9 @@ configure :test do
     encoding: 'utf8',
     database: 'correios_tracking_api_test',
     pool: 5,
-    username: 'postgres',
-    host: 'postgres'
+    username: ENV['pg_user'],
+    password: ENV['pg_pass'],
+    host: ENV['pg_host']
   }
 end
 
@@ -30,7 +32,8 @@ configure :production do
     encoding: 'utf8',
     database: 'correios_tracking_api_production',
     pool: 5,
-    username: 'postgres',
-    host: 'postgres'
+    username: ENV['pg_user'],
+    password: ENV['pg_pass'],
+    host: ENV['pg_host']
   }
 end
