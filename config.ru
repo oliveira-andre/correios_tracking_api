@@ -2,10 +2,10 @@
 
 require 'rubygems'
 require 'bundler'
+require 'sinatra/base'
 Dir['./initializers/*.rb'].sort.each { |file| require file }
+Dir['./app/{helpers,controllers}/*.rb'].sort.each { |file| require file }
 
 Bundler.require(:default, settings.env)
 
-require './app'
-
-run App
+map('/') { run HomeController }
