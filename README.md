@@ -1,6 +1,18 @@
 # Correios Tracking API (Ruby/Sinatra API)
 
-running server
+## Development
+
+Reset Database
 ```
-rackup config.ru -o 0.0.0.0
+make reset
+```
+
+Running Server
+```
+make up
+```
+
+Launch Console
+```
+make console
 ```
