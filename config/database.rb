@@ -2,38 +2,26 @@
 
 require 'dotenv/load'
 
-configure :development do
-  set :database, {
-    adapter: 'postgresql',
-    encoding: 'utf8',
-    database: 'correios_tracking_api_development',
-    pool: 5,
-    username: ENV['pg_user'],
-    password: ENV['pg_pass'],
-    host: ENV['pg_host']
-  }
-end
-
 configure :test do
   set :database, {
     adapter: 'postgresql',
     encoding: 'utf8',
     database: 'correios_tracking_api_test',
     pool: 5,
-    username: ENV['pg_user'],
-    password: ENV['pg_pass'],
-    host: ENV['pg_host']
+    host: ENV['PG_HOST'],
+    username: ENV['PG_USER'],
+    password: ENV['PG_PASS']
   }
 end
 
-configure :production do
+configure :development do
   set :database, {
     adapter: 'postgresql',
     encoding: 'utf8',
-    database: 'correios_tracking_api_production',
+    database: 'correios_tracking_api_development',
     pool: 5,
-    username: ENV['pg_user'],
-    password: ENV['pg_pass'],
-    host: ENV['pg_host']
+    host: ENV['PG_HOST'],
+    username: ENV['PG_USER'],
+    password: ENV['PG_PASS']
   }
 end

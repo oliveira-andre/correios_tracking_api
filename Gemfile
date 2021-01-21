@@ -2,16 +2,17 @@
 
 source 'https://rubygems.org'
 
-gem 'activerecord', '~> 5.2.2'
+ruby '3.0.0'
+
+gem 'activerecord'
 gem 'dotenv'
 gem 'pg'
 gem 'puma'
 gem 'rake'
-gem 'sinatra', '~> 2.0.5'
-gem 'sinatra-activerecord', '~> 2.0.14'
+gem 'rubocop'
+gem 'sinatra'
+gem 'sinatra-activerecord'
 
-group :development, :test do
-  gem 'byebug'
-  gem 'rspec'
-  gem 'rubocop'
+group :development do
+  gem 'tux'
 end
